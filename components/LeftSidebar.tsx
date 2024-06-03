@@ -9,6 +9,7 @@ import React from 'react'
 
 const LeftSidebar = () => {
   const pathname = usePathname();
+  const router = useRouter();
 
   return (
     <section className={cn("left_sidebar h-[calc(100vh-5px)]", {
