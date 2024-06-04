@@ -26,8 +26,8 @@ import {
 import { cn } from "@/lib/utils"
 import { useState } from "react"
 import { Textarea } from "@/components/ui/textarea"
-// import GeneratePodcast from "@/components/GeneratePodcast"
-// import GenerateThumbnail from "@/components/GenerateThumbnail"
+import GeneratePodcast from "@/components/GeneratePodcast"
+import GenerateThumbnail from "@/components/GenerateThumbnail"
 import { Loader } from "lucide-react"
 import { Id } from "@/convex/_generated/dataModel"
 import { useToast } from "@/components/ui/use-toast"
@@ -120,7 +120,7 @@ const CreatePodcast = () => {
                 <FormItem className="flex flex-col gap-2.5">
                   <FormLabel className="text-16 font-bold text-white-1">Title</FormLabel>
                   <FormControl>
-                    <Input className="input-class focus-visible:ring-offset-green-1" placeholder="Podniv Pro Podcast" {...field} />
+                    <Input className="input-class focus-visible:ring-offset-green-1" placeholder="Podcast title" {...field} />
                   </FormControl>
                   <FormMessage className="text-white-1" />
                 </FormItem>
@@ -168,7 +168,7 @@ const CreatePodcast = () => {
             />
           </div>
           <div className="flex flex-col pt-10">
-              {/* <GeneratePodcast 
+              <GeneratePodcast 
                 setAudioStorageId={setAudioStorageId}
                 setAudio={setAudioUrl}
                 voiceType={voiceType!}
@@ -184,7 +184,7 @@ const CreatePodcast = () => {
                image={imageUrl}
                imagePrompt={imagePrompt}
                setImagePrompt={setImagePrompt}
-              /> */}
+              />
 
               <div className="mt-10 w-full">
                 <Button type="submit" className="text-16 w-full bg-green-1 py-4 font-extrabold text-white-1 transition-all duration-500 hover:bg-black-1">
