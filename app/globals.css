@@ -107,6 +107,10 @@ html {
   .text-32 {
     @apply text-[32px] leading-normal;
   }
+
+  .cl-formFieldInput {
+
+  }
 }
 
 /* ===== custom classes ===== */
@@ -157,7 +161,7 @@ html {
 
 /* ======= clerk overrides ======== */
 .cl-socialButtonsIconButton {
-  border: 2px solid #222429;
+  border: 2px solid #1DB954;
 }
 .cl-button {
   color: white;
@@ -166,28 +170,41 @@ html {
   filter: invert(1);
 }
 .cl-internal-b3fm6y {
-  background: #f97535;
+  background: #1DB954;
 }
 .cl-formButtonPrimary {
-  background: #f97535;
+  background: #1DB954;
 }
 .cl-footerActionLink {
-  color: #f97535;
+  color: #1DB954;
+}
+.cl-internal-1b1v3l {
+  color: #c5d0e6;
 }
 .cl-headerSubtitle {
   color: #c5d0e6;
 }
 .cl-logoImage {
-  width: 10rem;
   height: 3rem;
 }
 .cl-internal-4a7e9l {
   color: white;
 }
 
+.cl-input {
+  background: #15171c;
+  border: 1px solid #222429;
+  color: #c5d0e6;
+}
+.cl-formFieldInput {
+  background: #15171c;
+  border: 1px solid #222429;
+  color: #c5d0e6;
+}
+
 .cl-userButtonPopoverActionButtonIcon {
   color: white;
 }
 .cl-internal-wkkub3 {
-  color: #f97535;
+  color: #1DB954;
 }
