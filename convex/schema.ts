@@ -22,10 +22,10 @@ export default defineSchema({
     .searchIndex('search_author', { searchField: 'author' })
     .searchIndex('search_title', { searchField: 'podcastTitle' })
     .searchIndex('search_body', { searchField: 'podcastDescription' }),
-  users: defineTable({
+   users: defineTable({
+    clerkId: v.string(),
     email: v.string(),
     imageUrl: v.string(),
-    clerkId: v.string(),
     name: v.string(),
   })
 })

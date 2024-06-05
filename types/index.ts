@@ -94,7 +94,15 @@ export interface TopPodcastersProps {
   totalPodcasts: number;
 }
 
-
 export interface CarouselProps {
   fansLikeDetail: TopPodcastersProps[];
+}
+export interface ProfilePodcastProps {
+  podcasts: PodcastProps[];
+  listeners: number;
+}
+export interface ProfileCardProps {
+  podcastData: ProfilePodcastProps;
+  imageUrl: string;
+  userFirstName: string;
 }
