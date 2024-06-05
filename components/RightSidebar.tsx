@@ -40,7 +40,7 @@ const RightSidebar = () => {
         </Link>
       </SignedIn>
 <section>
-    <Header headerTitle="Podcasters you may like" />
+    <Header headerTitle="Podcastrs you may like" />
     <div className="flex justify-center pt-8">
         <EmblaCarousel fansLikeDetail={topPodcasters!}/>
     </div>
