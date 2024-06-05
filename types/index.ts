@@ -90,6 +90,7 @@ export interface TopPodcastersProps {
   podcast: {
     podcastTitle: string;
     podcastId: Id<"podcasts">;
+    imageUrl: string;
   }[];
   totalPodcasts: number;
 }

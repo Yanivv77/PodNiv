@@ -9,7 +9,8 @@ import Image from 'next/image'
 import LoaderSpinner from '../LoaderSpinner'
 
 
-const EmblaCarousel = ({ fansLikeDetail }: CarouselProps) => {
+const EmblaCarousel = ({ fansLikeDetail }: any) => {
+
   const router = useRouter();
 
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [Autoplay()])
@@ -32,6 +33,11 @@ const EmblaCarousel = ({ fansLikeDetail }: CarouselProps) => {
   )
 
   const slides = fansLikeDetail && fansLikeDetail?.filter((item: any) => item.totalPodcasts > 0)
+if (slides && slides.length > 0) {
+  console.log(slides[0].podcast.imageUrl);
+} else {
+  console.log('Slides is undefined or empty');
+}
 
   if(!slides) return <LoaderSpinner />
 
@@ -45,7 +51,7 @@ const EmblaCarousel = ({ fansLikeDetail }: CarouselProps) => {
             onClick={() => router.push(`/podcasts/${item.podcast[0]?.podcastId}`)}
           >
             <Image 
-            src={item.imageUrl}
+            src={item.podcast[0]?.imageUrl}
             alt="card"
             fill
             className="absolute size-full rounded-xl border-none"
