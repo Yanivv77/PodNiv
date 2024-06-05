@@ -1,16 +1,16 @@
 import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
 import "./globals.css";
-import ConvexClientProvider from "@/providers/ConvexClerkProvider";
-
+import ConvexClerkProvider from "../providers/ConvexClerkProvider";
+import AudioProvider from "@/providers/AudioProvider";
 
 const manrope = Manrope({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Podniv",
+  title: "podniv",
   description: "Generate your podcasts using AI",
   icons: {
-    icon: '/icons/podniv-logo.svg'
+    icon: '/icons/podniv-icon.svg'
   }
 };
 
@@ -20,10 +20,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
+    <ConvexClerkProvider>
       <html lang="en">
+        <AudioProvider>
           <body className={`${manrope.className}`}>
-          <ConvexClientProvider>{children}</ConvexClientProvider>
+              {children}
           </body>
+        </AudioProvider>
       </html>
+    </ConvexClerkProvider>
   );
 }

@@ -138,7 +138,7 @@ const CreatePodcast = () => {
                 </SelectTrigger>
                 <SelectContent className="text-16 border-none bg-black-1 font-bold text-white-1 focus:ring-green-1">
                   {voiceCategories.map((category) => (
-                    <SelectItem key={category} value={category} className="capitalize focus:bg-orange-1">
+                    <SelectItem key={category} value={category} className="capitalize focus:bg-green-1">
                       {category}
                     </SelectItem>
                   ))}
@@ -160,7 +160,7 @@ const CreatePodcast = () => {
                 <FormItem className="flex flex-col gap-2.5">
                   <FormLabel className="text-16 font-bold text-white-1">Description</FormLabel>
                   <FormControl>
-                    <Textarea className="input-class focus-visible:ring-offset-orange-1" placeholder="Write a short podcast description" {...field} />
+                    <Textarea className="input-class focus-visible:ring-offset-green-1" placeholder="Write a short podcast description" {...field} />
                   </FormControl>
                   <FormMessage className="text-white-1" />
                 </FormItem>
