@@ -36,7 +36,7 @@ const EmblaCarousel = ({ fansLikeDetail }: CarouselProps) => {
   if(!slides) return <LoaderSpinner />
 
   return (
-    <section className="flex w-full flex-col gap-4 overflow-hidden" ref={emblaRef}>
+    <section className="flex w-1/2 flex-col gap-4 overflow-hidden" ref={emblaRef}>
       <div className="flex">
         {slides.slice(0, 5).map((item) => (
           <figure
@@ -50,7 +50,7 @@ const EmblaCarousel = ({ fansLikeDetail }: CarouselProps) => {
             fill
             className="absolute size-full rounded-xl border-none"
             />
-            <div className="glassmorphism-black relative z-10 flex flex-col rounded-b-xl p-4">
+            <div className="glassmorphism-black relative z-10 flex flex-col rounded-b-xl p-1">
               <h2 className="text-14 font-semibold text-white-1">{item.podcast[0]?.podcastTitle}</h2>
               <p className="text-12 font-normal text-white-2">{item.name}</p>
             </div>
