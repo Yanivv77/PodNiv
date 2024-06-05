@@ -5,7 +5,7 @@ export interface PodcastCardProps {
   imgUrl: string;
   title: string;
   description: string;
-  podcastId: number;
+  podcastId: Id<"podcasts">;
 }
 
 export interface PodcastProps {
@@ -45,3 +45,4 @@ export interface GenerateThumbnailProps {
   imagePrompt: string;
   setImagePrompt: Dispatch<SetStateAction<string>>;
 }
+
