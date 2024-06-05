@@ -39,12 +39,12 @@ const RightSidebar = () => {
           </div>
         </Link>
       </SignedIn>
-<section>
+      <section>
     <Header headerTitle="Podcastrs you may like" />
     <div className="flex justify-center pt-8">
         <EmblaCarousel fansLikeDetail={topPodcasters!}/>
     </div>
-</section>
+      </section>
       <section className="flex flex-col gap-8 pt-12">
         <Header headerTitle="Top Podcastrs" />
         <div className="flex flex-col gap-6">
