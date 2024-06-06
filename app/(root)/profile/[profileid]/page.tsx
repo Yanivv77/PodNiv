@@ -22,7 +22,10 @@ const ProfilePage = ({
     authorId: params.profileId,
   });
 
-  if (!user || !podcastsData) return <LoaderSpinner />;
+  // Handle loading state more explicitly
+  if (!user || !podcastsData) {
+    return <LoaderSpinner />;
+  }
 
   return (
     <section className="mt-9 flex flex-col">
@@ -30,32 +33,33 @@ const ProfilePage = ({
         Podcaster Profile
       </h1>
       <div className="mt-6 flex flex-col gap-6 max-md:items-center md:flex-row">
-        <ProfileCard
-          podcastData={podcastsData!}
-          imageUrl={user?.imageUrl!}
-          userFirstName={user?.name!}
-        />
+        {user && (
+          <ProfileCard
+            podcastData={podcastsData}
+            imageUrl={user.imageUrl}
+            userFirstName={user.name}
+          />
+        )}
       </div>
       <section className="mt-9 flex flex-col gap-5">
         <h1 className="text-20 font-bold text-white-1">All Podcasts</h1>
         {podcastsData && podcastsData.podcasts.length > 0 ? (
           <div className="podcast_grid">
-            {podcastsData?.podcasts
-              ?.slice(0, 4)
-              .map((podcast) => (
-                <PodcastCard
-                  key={podcast._id}
-                  imgUrl={podcast.imageUrl!}
-                  title={podcast.podcastTitle!}
-                  description={podcast.podcastDescription}
-                  podcastId={podcast._id}
-                />
-              ))}
+            {podcastsData.podcasts.map((podcast) => (
+              <PodcastCard
+                key={podcast._id}
+                imgUrl={podcast.imageUrl}
+                title={podcast.podcastTitle}
+                description={podcast.podcastDescription}
+                podcastId={podcast._id}
+              />
+            ))}
           </div>
         ) : (
           <EmptyState
-            title="You have not created any podcasts yet"
+            title="No podcasts found"
             buttonLink="/create-podcast"
+            buttonLabel="Create Podcast"
           />
         )}
       </section>
