@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useState } from 'react';
 import { useQuery } from "convex/react";
 
 import EmptyState from "@/components/EmptyState";
@@ -15,6 +16,8 @@ const ProfilePage = ({
     profileId: string;
   };
 }) => {
+  const [isLoading, setIsLoading] = useState(true);
+
   const user = useQuery(api.users.getUserById, {
     clerkId: params.profileId,
   });
@@ -22,12 +25,18 @@ const ProfilePage = ({
     authorId: params.profileId,
   });
 
-  if (!user || !podcastsData) return <LoaderSpinner />;
+  useEffect(() => {
+    if (user && podcastsData) {
+      setIsLoading(false);
+    }
+  }, [user, podcastsData]);
+
+  if (isLoading) return <LoaderSpinner />;
 
   return (
     <section className="mt-9 flex flex-col">
       <h1 className="text-20 font-bold text-white-1 max-md:text-center">
-      Podcaster Profile
+        Podcaster Profile
       </h1>
       <div className="mt-6 flex flex-col gap-6 max-md:items-center md:flex-row">
         <ProfileCard

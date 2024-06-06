@@ -33,11 +33,6 @@ const EmblaCarousel = ({ fansLikeDetail }: any) => {
   )
 
   const slides = fansLikeDetail && fansLikeDetail?.filter((item: any) => item.totalPodcasts > 0)
-if (slides && slides.length > 0) {
-  console.log(slides[0].podcast.imageUrl);
-} else {
-  console.log('Slides is undefined or empty');
-}
 
   if(!slides) return <LoaderSpinner />
 

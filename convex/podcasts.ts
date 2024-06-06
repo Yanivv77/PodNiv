@@ -112,7 +112,7 @@ export const getTrendingPodcasts = query({
 // this query will get the podcast by the authorId.
 export const getPodcastByAuthorId = query({
   args: {
-    authorId: v.string(),
+    authorId: v.optional(v.string()),
   },
   handler: async (ctx, args) => {
     const podcasts = await ctx.db
