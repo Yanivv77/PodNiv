@@ -8,6 +8,7 @@ import LoaderSpinner from "@/components/LoaderSpinner";
 import PodcastCard from "@/components/PodcastCard";
 import ProfileCard from "@/components/ProfileCard";
 import { api } from "@/convex/_generated/api";
+import { useUser } from '@clerk/clerk-react';
 
 const ProfilePage = ({
   params,
@@ -16,22 +17,11 @@ const ProfilePage = ({
     profileId: string;
   };
 }) => {
-  const [isLoading, setIsLoading] = useState(true);
+  const { user } = useUser();
 
-  const user = useQuery(api.users.getUserById, {
-    clerkId: params.profileId,
-  });
   const podcastsData = useQuery(api.podcasts.getPodcastByAuthorId, {
-    authorId: params.profileId,
+    authorId: user?.id,
   });
-
-  useEffect(() => {
-    if (user && podcastsData) {
-      setIsLoading(false);
-    }
-  }, [user, podcastsData]);
-
-  if (isLoading) return <LoaderSpinner />;
 
   return (
     <section className="mt-9 flex flex-col">
@@ -42,7 +32,7 @@ const ProfilePage = ({
         <ProfileCard
           podcastData={podcastsData!}
           imageUrl={user?.imageUrl!}
-          userFirstName={user?.name!}
+          userFirstName={user?.firstName!}
         />
       </div>
       <section className="mt-9 flex flex-col gap-5">

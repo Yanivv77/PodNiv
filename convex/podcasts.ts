@@ -115,10 +115,18 @@ export const getPodcastByAuthorId = query({
     authorId: v.optional(v.string()),
   },
   handler: async (ctx, args) => {
-    const podcasts = await ctx.db
-      .query("podcasts")
-      .filter((q) => q.eq(q.field("authorId"), args.authorId))
-      .collect();
+    let podcasts;
+    if (args.authorId) {
+      podcasts = await ctx.db
+        .query("podcasts")
+        .filter((q) => q.eq(q.field("authorId"), args.authorId))
+        .collect();
+    } else {
+      // Handle the case where no authorId is provided
+      podcasts = await ctx.db
+        .query("podcasts")
+        .collect();
+    }
 
     const totalListeners = podcasts.reduce(
       (sum, podcast) => sum + podcast.views,
@@ -128,7 +136,6 @@ export const getPodcastByAuthorId = query({
     return { podcasts, listeners: totalListeners };
   },
 });
-
 // this query will get the podcast by the search query.
 export const getPodcastBySearch = query({
   args: {
