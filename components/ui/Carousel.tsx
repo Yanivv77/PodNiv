@@ -44,7 +44,7 @@ if (slides && slides.length > 0) {
   return (
     <section className="flex w-full flex-col gap-4 overflow-hidden" ref={emblaRef}>
       <div className="flex">
-        {slides.slice(0, 5).map((item) => (
+        {slides.slice(0, 5).map((item:any) => (
           <figure
             key={item._id}
             className="carousel_box"
