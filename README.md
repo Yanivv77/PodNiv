@@ -1,36 +1,82 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# **PodNiv: Transform Your Text Into Engaging Podcasts**
 
-First, run the development server:
+### **Empower Your Content With Audio**
+PodNiv is a SaaS platform that converts written text into high-quality, AI-driven podcasts. Whether you're a content creator, marketer, or business owner, PodNiv offers an effortless way to repurpose your written content into accessible, engaging audio experiences that your audience can enjoy on the go.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## **Live Website**
+Check out the live version of PodNiv here: [PodNiv Live Website](https://pod-niv.vercel.app/)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## **Why PodNiv?**
+In today’s fast-paced world, not everyone has time to sit down and read lengthy articles or blog posts. PodNiv bridges the gap between written and audio content, helping you meet your audience where they are—whether it’s during their commute, workout, or multitasking. By offering podcasts as an alternative, you not only increase accessibility but also deepen engagement with your audience.
 
-## Learn More
+### **Key Benefits**:
+- **Accessibility**: Make your content available in a more flexible, easy-to-consume format.
+- **Engagement**: Reach new audiences who prefer to listen rather than read.
+- **Efficiency**: Convert text into podcasts in seconds, saving time for creators and businesses.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## **Quick Start Guide**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### **Prerequisites**
+- Node.js v14+ installed
+- OpenAI API key for text-to-speech processing
 
-## Deploy on Vercel
+### **Installation**
+1. Clone the PodNiv repository:
+   ```bash
+   git clone https://github.com/Yanivv77/PodNiv.git
+   cd PodNiv
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+3. Set up environment variables:
+   Rename the `.env.copy` file in the project root to `.env.local`, then add your keys:
+
+4. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+### **Generate Your First Podcast**
+Once the server is running, open your browser and navigate to `http://localhost:3000`. Simply input your text into the platform, customize the podcast settings, and click "Generate Podcast." In seconds, PodNiv will transform your text into a podcast thats ready-to-share.
+
+---
+
+## **How to Contribute**
+
+We’re always open to contributions! Whether it’s new features, bug fixes, or enhancements, your ideas are welcome. Here’s how to get started:
+
+1. Fork the repository.
+2. Create a new branch:
+   ```bash
+   git checkout -b feature-branch
+   ```
+3. Make your changes and commit them:
+   ```bash
+   git commit -m 'Description of feature or fix'
+   ```
+4. Push your branch to GitHub:
+   ```bash
+   git push origin feature-branch
+   ```
+5. Open a pull request, and we’ll review your changes!
+
+---
+
+## **License**
+PodNiv is licensed under the MIT License—feel free to use, modify, and distribute the project as needed.
+
+---
+
+## **Get in Touch**
+Have questions or feedback? Feel free to reach out or open an issue on GitHub. We’d love to hear how PodNiv is helping you transform your content!
