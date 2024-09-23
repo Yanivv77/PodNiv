@@ -1,0 +1,173 @@
+- .env.copy
+- .env.local
+- .eslintrc.json
+- .gitignore
+- app
+  - (auth)
+    - layout.tsx
+    - sign-in
+      - [[...sign-in]]
+        - page.tsx
+    - sign-up
+      - [[...sign-up]]
+        - page.tsx
+  - (root)
+    - create-podcast
+      - page.tsx
+    - discover
+      - page.tsx
+    - globals.css
+    - layout.tsx
+    - page.tsx
+    - podcasts
+      - [podcastId]
+        - page.tsx
+    - profile
+      - [profileId]
+        - page.tsx
+  - favicon.ico
+  - globals.css
+  - layout.tsx
+- components
+  - EmptyState.tsx
+  - GeneratePodcast.tsx
+  - GenerateThumbnail.tsx
+  - Header.tsx
+  - LeftSidebar.tsx
+  - LoaderSpinner.tsx
+  - MobileNav.tsx
+  - PodcastCard.tsx
+  - PodcastDetailPlayer.tsx
+  - PodcastPlayer.tsx
+  - ProfileCard.tsx
+  - RightSidebar.tsx
+  - Searchbar.tsx
+  - ui
+    - button.tsx
+    - Carousel.tsx
+    - EmblaCarouselDotButton.tsx
+    - form.tsx
+    - input.tsx
+    - label.tsx
+    - progress.tsx
+    - select.tsx
+    - sheet.tsx
+    - textarea.tsx
+    - toast.tsx
+    - toaster.tsx
+    - use-toast.ts
+- components.json
+- constants
+  - index.ts
+- convex
+  - auth.config.ts
+  - files.ts
+  - http.ts
+  - openai.ts
+  - podcasts.ts
+  - schema.ts
+  - users.ts
+  - _generated
+    - api.d.ts
+    - api.js
+    - dataModel.d.ts
+    - server.d.ts
+    - server.js
+- docs
+- lib
+  - formatTime.ts
+  - useDebounce.ts
+  - utils.ts
+- middleware.ts
+- next-env.d.ts
+- next.config.mjs
+- package-lock.json
+- package.json
+- postcss.config.mjs
+- providers
+  - AudioProvider.tsx
+  - ConvexClerkProvider.tsx
+- public
+  - alloy.mp3
+  - app.svg
+  - appName.svg
+  - arrow.svg
+  - b1.svg
+  - b4.svg
+  - b5.svg
+  - bg.png
+  - c.svg
+  - cloud.svg
+  - cloudName.svg
+  - confetti.gif
+  - dock.svg
+  - dockerName.svg
+  - echo.mp3
+  - exp1.svg
+  - exp2.svg
+  - exp3.svg
+  - exp4.svg
+  - fable.mp3
+  - fm.svg
+  - footer-grid.svg
+  - git.svg
+  - grid.svg
+  - gsap.svg
+  - host.svg
+  - hostName.svg
+  - icons
+    - auth-logo.svg
+    - avatar.svg
+    - delete.svg
+    - discover.svg
+    - edit.svg
+    - emptyState.svg
+    - forward.svg
+    - hamburger.svg
+    - headphone.svg
+    - home.svg
+    - microphone.svg
+    - mute.svg
+    - Pause.svg
+    - play-gray.svg
+    - Play.svg
+    - podniv-icon.svg
+    - profile.svg
+    - randomPlay.svg
+    - reverse.svg
+    - right-arrow.svg
+    - search.svg
+    - three-dots.svg
+    - unmute.svg
+    - upload-image.svg
+    - verified.svg
+    - watch.svg
+  - images
+    - bg-img.png
+    - player1.png
+  - insta.svg
+  - link.svg
+  - next.svg
+  - nova.mp3
+  - onyx.mp3
+  - p1.svg
+  - p2.svg
+  - p3.svg
+  - p4.svg
+  - profile.svg
+  - re.svg
+  - s.svg
+  - shimmer.mp3
+  - stream.svg
+  - streamName.svg
+  - tail.svg
+  - three.svg
+  - ts.svg
+  - twit.svg
+  - vercel.svg
+  - wha.svg
+- README.md
+- tailwind.config.ts
+- tsconfig.json
+- types
+  - index.ts

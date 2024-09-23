@@ -1,6 +1,10 @@
 
 # **PodNiv: Transform Your Text Into Engaging Podcasts**
 
+<div align="center">
+    <img src="public/icons/podniv-icon.svg" alt="PodNiv Icon" width="200"/>
+</div>
+
 ### **Empower Your Content With Audio**
 PodNiv is a SaaS platform that converts written text into high-quality, AI-driven podcasts. Whether you're a content creator, marketer, or business owner, PodNiv offers an effortless way to repurpose your written content into accessible, engaging audio experiences that your audience can enjoy on the go.
 
@@ -21,11 +25,158 @@ In today’s fast-paced world, not everyone has time to sit down and read length
 
 ---
 
-## **Quick Start Guide**
+## ⚙️ **Tech Stack**
+- **Next.js**
+- **TypeScript**
+- **Convex**
+- **OpenAI**
+- **Clerk**
+- **ShadCN**
+- **Tailwind CSS**
 
-### **Prerequisites**
-- Node.js v14+ installed
-- OpenAI API key for text-to-speech processing
+---
+
+## 🔋 **Features**
+* **Robust Authentication**: Secure and reliable user login and registration system.
+
+* **Modern Home Page**: Showcases trending podcasts with a sticky podcast player for continuous listening.
+
+* **Discover Podcasts Page**: Dedicated page for users to explore new and popular podcasts.
+
+* **Fully Functional Search**: Allows users to find podcasts easily using various search criteria.
+
+* **Create Podcast Page**: Enables podcast creation with text-to-audio conversion, AI image generation, and previews.
+
+* **Multi Voice AI Functionality**: Supports multiple AI-generated voices for dynamic podcast creation.
+
+* **Profile Page**: View all created podcasts with options to delete them.
+
+* **Podcast Details Page**: Displays detailed information about each podcast, including creator details, number of listeners, and transcript.
+
+* ***Podcast Player**: Features backward/forward controls, as well as mute/unmute functionality for a seamless listening experience.
+
+* **Responsive Design**: Fully functional and visually appealing across all devices and screen sizes.
+
+---
+
+## **Project Structure**
+```
+- .env.copy
+- .env.local
+- .eslintrc.json
+- .gitignore
+- app/
+  ├── (auth)/
+  │   ├── layout.tsx
+  │   └── sign-in/
+  │       └── [[...sign-in]]/
+  │           └── page.tsx
+  │   └── sign-up/
+  │       └── [[...sign-up]]/
+  │           └── page.tsx
+  ├── (root)/
+  │   ├── create-podcast/
+  │       └── page.tsx
+  │   ├── discover/
+  │       └── page.tsx
+  │   ├── podcasts/
+  │       └── [podcastId]/
+  │           └── page.tsx
+  │   ├── profile/
+  │       └── [profileId]/
+  │           └── page.tsx
+  │   ├── globals.css
+  │   └── layout.tsx
+  └── favicon.ico
+- components/
+  ├── EmptyState.tsx
+  ├── GeneratePodcast.tsx
+  ├── GenerateThumbnail.tsx
+  ├── Header.tsx
+  ├── LeftSidebar.tsx
+  ├── LoaderSpinner.tsx
+  ├── MobileNav.tsx
+  ├── PodcastCard.tsx
+  ├── PodcastDetailPlayer.tsx
+  ├── PodcastPlayer.tsx
+  ├── ProfileCard.tsx
+  ├── RightSidebar.tsx
+  ├── Searchbar.tsx
+  └── ui/
+      ├── button.tsx
+      ├── Carousel.tsx
+      ├── EmblaCarouselDotButton.tsx
+      ├── form.tsx
+      ├── input.tsx
+      ├── label.tsx
+      ├── progress.tsx
+      ├── select.tsx
+      ├── sheet.tsx
+      ├── textarea.tsx
+      ├── toast.tsx
+      ├── toaster.tsx
+      └── use-toast.ts
+- components.json
+- constants/
+  └── index.ts
+- convex/
+  ├── auth.config.ts
+  ├── files.ts
+  ├── http.ts
+  ├── openai.ts
+  ├── podcasts.ts
+  ├── schema.ts
+  └── users.ts
+  └── _generated/
+      ├── api.d.ts
+      ├── api.js
+      ├── dataModel.d.ts
+      ├── server.d.ts
+      └── server.js
+- docs/
+- lib/
+  ├── formatTime.ts
+  ├── useDebounce.ts
+  └── utils.ts
+- middleware.ts
+- next-env.d.ts
+- next.config.mjs
+- package-lock.json
+- package.json
+- postcss.config.mjs
+- providers/
+  ├── AudioProvider.tsx
+  └── ConvexClerkProvider.tsx
+- public/
+  ├── alloy.mp3
+  ├── app.svg
+  ├── appName.svg
+  ├── arrow.svg
+  ├── bg.png
+  ├── confetti.gif
+  ├── dockerName.svg
+  ├── echo.mp3
+  ├── icons/
+  │   ├── auth-logo.svg
+  │   ├── avatar.svg
+  │   ├── delete.svg
+  │   ├── play-gray.svg
+  │   └── podniv-icon.svg
+  ├── images/
+  │   ├── bg-img.png
+  │   └── player1.png
+  └── nova.mp3
+- README.md
+- tailwind.config.ts
+- tsconfig.json
+- types/
+  └── index.ts
+```
+
+---
+
+
+## **Quick Start Guide**
 
 ### **Installation**
 1. Clone the PodNiv repository:
